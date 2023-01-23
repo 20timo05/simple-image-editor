@@ -10,12 +10,10 @@ const image = document.querySelector("#image");
 heightInput.addEventListener("change", (evt) => {
   const newHeight = parseInt(evt.target.value);
   imageWrapper.style.height = `calc(${newHeight}px * 5)`;
-  applyDefaultScale();
 });
 widthInput.addEventListener("change", (evt) => {
   const newWidth = parseInt(evt.target.value);
   imageWrapper.style.width = `calc(${newWidth}px * 5)`;
-  applyDefaultScale();
 });
 
 heightInput.dispatchEvent(new Event("change"));
@@ -49,17 +47,18 @@ function applyDefaultScale() {
   const { width, height } = imageWrapper.getBoundingClientRect();
   defaultScale = getObjectFitSize(
     false,
-    width,
-    height,
+    width - 1,
+    height - 1,
     image.width,
     image.height
   );
+  console.log(defaultScale);
   image.style.height = defaultScale.height + "px";
   image.style.width = defaultScale.width + "px";
   image.style.left = defaultScale.x + "px";
   image.style.top = defaultScale.y + "px";
 }
-applyDefaultScale();
+image.addEventListener("load", applyDefaultScale)
 document.querySelector("#centerDefault").addEventListener("click", () => {
   image.style.scale = null;
   scale.value = 50;
