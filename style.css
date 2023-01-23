@@ -1,0 +1,114 @@
+section,
+#imageWrapper > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+form > input {
+  width: 3rem;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+#imageWrapper {
+  height: calc(55px * 5);
+  width: calc(85px * 5);
+  border: 1px solid black;
+  position: relative;
+  transition: 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+#imageWrapper > svg {
+  height: 4rem;
+  cursor: pointer;
+}
+
+#image {
+  position: absolute;
+}
+
+button {
+  background: none;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04aa6d;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04aa6d;
+  cursor: pointer;
+}
+
+#options {
+  width: 100%;
+  font-family: sans-serif;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+}
+
+#options > button {
+  align-self: center;
+  font-size: 1rem;
+}

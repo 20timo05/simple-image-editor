@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="app.js" defer></script>
+    <title>Bild zuschneiden für Mörl</title>
+  </head>
+  <body>
+    <section>
+      <form>
+        <input type="number" value="85" id="width" />
+        ✕
+        <input type="number" value="55" id="height" />
+      </form>
+      <div id="imageWrapper">
+        <img id="image" src="" />
+        <input id="fileUpload" type="file" hidden />
+        <svg
+          id="fileUploadButton"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+        >
+          <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+          <path
+            d="M246.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 109.3V320c0 17.7 14.3 32 32 32s32-14.3 32-32V109.3l73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 53 43 96 96 96H352c53 0 96-43 96-96V352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V352z"
+          />
+        </svg>
+      </div>
+      <div id="options">
+        <button id="centerDefault">Zentrieren</button>
+        <p>Größer/ kleiner</p>
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="50"
+          class="slider"
+          id="scale"
+        />
+
+        <p>Verschieben links/ rechts</p>
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="50"
+          class="slider"
+          id="offsetX"
+        />
+
+        <p>Verschieben oben/ unten</p>
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="50"
+          class="slider"
+          id="offsetY"
+        />
+      </div>
+      <button id="download">Download</button>
+    </section>
+  </body>
+</html>
